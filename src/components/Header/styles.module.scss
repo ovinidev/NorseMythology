@@ -1,0 +1,115 @@
+.Container {
+  background: rgb(235, 225, 246);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  padding: 0.5rem 5rem;
+  box-shadow: 0 0 0.3em rgb(0, 0, 0);
+  
+  strong {
+    
+    a {
+      font-family: inter;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: inherit;
+    }
+  }
+
+  ul {
+    a {
+      font-size: 1.2rem;
+      display: inline-block;
+      font-family: inter;
+      padding: 0.7rem;
+      color: inherit;
+      position: relative;
+    }
+    
+    a::after {
+      content: '';
+      position: absolute;
+      top: 2.5rem;
+      left: 25%;
+      width: 0;
+      height: 0.2rem;
+      background: #440044;
+      transition: all 300ms ease-in-out;
+    }
+
+    a:hover::after {
+      width: 50%;
+    }
+  }
+}
+
+div {
+  .Menu {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .Container {
+    display: none;
+  }
+
+  div {
+    .Menu {
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      left: 0;
+    }
+  
+    .Menu:checked~.Container {
+      display: block;
+
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      strong {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+      }
+
+      a {
+        font-size: 1.8rem;
+      }
+    }
+  
+    .Label::after {
+      content: "≡";
+      position: fixed;
+      background: #330033;
+      color: rgb(245, 238, 238);
+      z-index: 2;
+      top: 1.5rem;
+      right: 2rem;
+      font-size: 3rem;
+      line-height: 3rem;
+      width: 3rem;
+      height: 3rem;
+      text-align: center;
+      padding: 0.2rem;
+      cursor: pointer;
+    }
+  }
+}
