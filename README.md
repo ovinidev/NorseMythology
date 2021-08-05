@@ -33,6 +33,4 @@ Você pode visualizar a funcionalidade do projeto através do [link](https://myr
 Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.
   
 ## Resultado final:
-<p align="center">
-<img  src="https://i.imgur.com/UkawPr7.png" alt="imagem" width=900px> <br>
 
