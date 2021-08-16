@@ -1,34 +1,28 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-import { useEffect, useState } from 'react';
-import styles from './styles.module.scss';
+import P from 'prop-types';
+import * as Styled from './styles';
 
-export const Header = () => {
-  const [clicked, setClicked] = useState(false);
-
-  const handleClick = () => {
-    setClicked(!clicked);
-  };
-
-  useEffect(() => {
-    document.getElementById('Menu').checked = false;
-  }, [clicked]);
-  
+export const Header = ({
+  children,
+  colorDark = true,
+  as = 'h1',
+  size = 'big',
+  uppercase = false,
+}) => {
   return (
-    <div>
-      <input className={styles.Menu} id="Menu" type="checkbox" aria-label="close" role="button" />
-      <label className={styles.Label} htmlFor="Menu" title="Close menu"></label>
-      <header className={styles.Container}>
-        <strong><a href="#home">React</a></strong>
-        <nav>
-          <ul onClick={handleClick}>
-            <a href="#description">Descrição</a>
-            <a href="#skils">Habilidades</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#goals">Objetivos</a>
-            <a href="#hobby">Hobbies</a>
-          </ul>
-        </nav>
-      </header>
-    </div>
+    <Styled.Title
+      colorDark={colorDark}
+      as={as}
+      size={size}
+      uppercase={uppercase}>
+      {children}
+    </Styled.Title>
   );
+};
+
+Header.propTypes = {
+  children: P.node.isRequired,
+  colorDark: P.bool,
+  as: P.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  size: P.oneOf(['small', 'medium', 'big', 'huge']),
+  uppercase: P.bool,
 };
