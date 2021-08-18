@@ -5,7 +5,7 @@ export const Header = ({
   children,
   colorDark = true,
   as = 'h1',
-  size = 'big',
+  size = 'huge',
   uppercase = false,
 }) => {
   return (
