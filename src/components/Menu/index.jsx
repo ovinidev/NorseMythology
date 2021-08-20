@@ -3,7 +3,6 @@ import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu';
 import { useState } from 'react';
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close';
 import * as Styled from './styles';
-import { SectionContainer } from '../SectionContainer';
 import { LogoLink } from '../LogoLink';
 import { NavLinks } from '../NavLinks';
 
@@ -22,18 +21,16 @@ export const Menu = ({ links = [], logoData }) => {
           <MenuIcon aria-label="Open menu" />)}
       </Styled.Button>
       <Styled.Container visible={visible} onClick={() => setVisible(false)}>
-        <SectionContainer>
-          <Styled.MenuContainer>
-            <LogoLink {...logoData} />
-            <NavLinks links={links} />
-          </Styled.MenuContainer>
-        </SectionContainer>
+        <Styled.MenuContainer>
+          <LogoLink {...logoData} />
+          <NavLinks links={links} />
+        </Styled.MenuContainer>
       </Styled.Container>
     </>
   );
 };
 
-MenuLink.propTypes = {
-  ...Navlinks.propTypes,
+Menu.propTypes = {
+  ...NavLinks.propTypes,
   logoData: P.shape(LogoLink.propTypes).isRequired,
 };

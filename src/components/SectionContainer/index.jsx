@@ -9,6 +9,6 @@ export const SectionContainer = ({ children }) => {
   );
 };
 
-LogoLink.propTypes = {
+SectionContainer.propTypes = {
   children: P.node.isRequired,
 };

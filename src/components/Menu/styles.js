@@ -1,6 +1,4 @@
 import styled, { css } from 'styled-components';
-import { Container as SectionContainer } from '../SectionContainer/styles';
-import { Title as Header } from '../Header/styles';
 
 const menuVisible = (theme) => css`
   visibility: visible;
@@ -14,82 +12,60 @@ export const Container = styled.div`
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    border-bottom: ${theme.colors.mediumGray};
-    background: ${theme.colors.white}
     transition: all 300ms ease-in-out;
-
-    > ${SectionContainer} {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-
-    & ${Header} {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
+    
     @media ${theme.media.lteMedium} {
       height: 100vh;
       visibility: hidden;
       opacity: 0;
       ${visible && menuVisible(theme)}
-
-      > ${SectionContainer} {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        height: 100vh;
-        align-items: center;
-        overflow-y: auto;
-      }
-
-      & ${Header} {
-        padding-bottom: ${theme.spacings.large};
-        display: flex;
-        justify-content: center;
-      }
     }
   `}
 `;
 
 export const MenuContainer = styled.div`
   ${({ theme }) => css`
+    background: ${theme.colors.white};
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 0.1rem solid ${theme.colors.mediumGray};
 
     @media ${theme.media.lteMedium} {
-      display: block;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: center;
       text-align: center;
+      min-height: 100vh;
+      height: 100%;
+      overflow-y: auto;
       padding: ${theme.spacings.xxlarge} 0;
+      cursor: pointer;
     }
   `}
 `;
 
 export const Button = styled.button`
   ${({ theme, visible }) => css`
-    z-index: 6;
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    width: 4rem;
-    height: 4rem;
     background: ${theme.colors.primaryColor};
     color: ${theme.colors.white};
+    width: 4rem;
+    height: 4rem;
+    position: fixed;
+    z-index: 6;
     border: none;
+    top: 2rem;
+    right: 2rem;
     display: none;
-    pointer-events: ${visible ? 'none' : 'all'}
+    pointer-events: ${visible ? 'none' : 'all'};
+    @media ${theme.media.lteMedium} {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    > svg {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   `}
-
-  @media ${theme.media.lteMedium} {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  > svg {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
 `;
