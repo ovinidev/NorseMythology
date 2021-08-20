@@ -27,9 +27,9 @@ export const MenuContainer = styled.div`
   ${({ theme }) => css`
     background: ${theme.colors.white};
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    border: 0.1rem solid ${theme.colors.mediumGray};
+    box-shadow: 0 0 0.3em rgb(0, 0, 0);
 
     @media ${theme.media.lteMedium} {
       flex-flow: column nowrap;
