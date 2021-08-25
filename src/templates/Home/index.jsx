@@ -1,8 +1,8 @@
-/* eslint-disable */
+/* eslint-disable prefer-template */
+/* eslint-disable no-unneeded-ternary */
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Base } from '../Base';
-
-
 import { mapData } from '../../api/map-data';
 
 import { GridTwoColumns } from '../../components/GridTwoColumns';
@@ -12,29 +12,34 @@ import { GridImage } from '../../components/GridImage';
 
 import { PageNotFound } from '../PageNotFound';
 import { Loading } from '../Loading';
-import { mapSections } from '../../api/map-sections';
-import { mapMenu } from '../../api/map-menu';
 
 function Home() {
   const [data, setData] = useState([]);
+  const location = useLocation();
 
   useEffect(() => {
+    const pathname = location.pathname.replace(/[^a-z0-9-_]/gi, '');
+    const slug = pathname ? pathname : 'mitologia-nordica';
+
     const load = async () => {
       try {
         const data = await fetch(
-          'http://localhost:1337/pages/?slug=mitologia-nordica',
+          'https://norse-mythology-project.herokuapp.com/pages/?slug=' + slug,
         );
-        const json = await data.json();
-        const pageData = mapData(json);
+        const dataJson = await data.json();
+        const pageData = mapData(dataJson);
         setData(pageData[0]);
       } catch (e) {
         console.log(e);
         setData(undefined);
       }
     };
+
     load();
   }, []);
+
   if (data === undefined) {
+    document.title = 'Página não encontrada';
     return <PageNotFound />;
   }
   if (data && !data.slug) {
@@ -43,7 +48,9 @@ function Home() {
 
   const { menu, sections, footerHtml } = data;
 
-  const { links, text, link, srcImg, slug } = menu;
+  const {
+    links, text, link, srcImg, slug, 
+  } = menu;
 
   return (
     <Base
@@ -70,6 +77,8 @@ function Home() {
         if (component === 'section.section-grid-image') {
           return <GridImage key={key} {...section} />;
         }
+
+        return 1;
       })}
     </Base>
   );
