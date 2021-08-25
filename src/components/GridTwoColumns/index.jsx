@@ -5,16 +5,17 @@ import { Header } from '../Header';
 import { TextComponent } from '../TextComponent';
 
 export const GridTwoColumns = ({
-  title, text, srcImg, background = false,
+  title, text, srcImg, background = false, sectionId = '',
 }) => {
   return (
-    <SectionBackground background={background}>
+    <SectionBackground background={background} sectionId={sectionId}>
       <Styled.Container background={background}>
         <Styled.TextContainer>
-          <Header uppercase colorDark={!background} as="h2">{title}</Header>
+          <Header uppercase colorDark={!background} as="h2">
+            {title}
+          </Header>
           <TextComponent>{text}</TextComponent>
         </Styled.TextContainer>
-
         <Styled.ImageContainer>
           <Styled.Image src={srcImg} alt={title} />
         </Styled.ImageContainer>
@@ -24,8 +25,9 @@ export const GridTwoColumns = ({
 };
 
 GridTwoColumns.propTypes = {
-  title: P.node.isRequired,
+  title: P.string.isRequired,
   text: P.string.isRequired,
   srcImg: P.string.isRequired,
   background: P.bool,
+  sectionId: P.string,
 };

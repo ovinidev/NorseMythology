@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Title } from '../Heading/styles';
+import { Title } from '../Header/styles';
 
 export const Container = styled.div`
   ${({ theme, background }) => css`
@@ -7,6 +7,7 @@ export const Container = styled.div`
     grid-template-columns: 1fr 2fr;
     align-items: center;
     gap: ${theme.spacings.large};
+    
     @media ${theme.media.lteMedium} {
       grid-template-columns: 1fr;
       text-align: center;
@@ -27,9 +28,13 @@ export const TextContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  ${({ theme }) => css``}
+  ${({ theme }) => css`
+    
+  `}
 `;
 
 export const Image = styled.img`
-  ${({ theme }) => css``}
+  ${({ theme }) => css`
+    width: 80%;  
+  `}
 `;

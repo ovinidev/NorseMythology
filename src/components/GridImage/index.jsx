@@ -5,10 +5,10 @@ import { TextComponent } from '../TextComponent';
 import * as Styled from './styles';
 
 export const GridImage = ({
-  title, description, grid, background = false, 
+  title, description, grid, background = false, sectionId = '',
 }) => {
   return (
-    <SectionBackground background={background}>
+    <SectionBackground background={background} sectionId={sectionId}>
       <Styled.Container>
         <Header size="huge" uppercase colorDark={!background} as="h2">
           {title}
@@ -36,4 +36,5 @@ GridImage.propTypes = {
       srcImg: P.string.isRequired,
     }),
   ).isRequired,
+  sectionId: P.string,
 };

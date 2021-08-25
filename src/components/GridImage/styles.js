@@ -12,8 +12,16 @@ export const Container = styled.div`
 export const Grid = styled.div`
   ${({ theme }) => css`
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: ${theme.spacings.large};
+
+    @media ${theme.media.lteMedium} {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+    }
   `}
 `;
 
@@ -29,6 +37,11 @@ export const Image = styled.img`
     transition: all 300ms ease-in-out;
     &:hover {
       transform: scale(1.2) rotate(10deg);
+    }
+
+    @media ${theme.media.lteMedium} {
+      width: 90%;
+
     }
   `}
 `;
