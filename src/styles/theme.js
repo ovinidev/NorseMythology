@@ -6,8 +6,8 @@ export const theme = {
   },
   font: {
     family: {
-      default: "'Open Sans', sans-serif;",
-      secondary: "'Montserrat', sans-serif;",
+      default: "'Grenze Gotisch','Open Sans', sans-serif;",
+      secondary: "'Aref Ruqaa', sans-serif;",
     },
     sizes: {
       xsmall: '8rem',
@@ -17,7 +17,7 @@ export const theme = {
       xlarge: '4.0rem',
       xxlarge: '4.8rem',
       huge: '5.6rem',
-      xhuge: '6.4rem',
+      xhuge: '6rem',
     },
   },
   media: {
