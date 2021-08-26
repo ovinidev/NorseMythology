@@ -34,9 +34,11 @@ export const GridElement = styled.div`
 export const Image = styled.img`
   ${({ theme }) => css`
     width: 100%;
-    transition: all 300ms ease-in-out;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
     &:hover {
-      transform: scale(1.2) rotate(10deg);
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
     }
 
     @media ${theme.media.lteMedium} {
