@@ -3,10 +3,8 @@
 
 <p align="center">
   
-<h4>
-  O site fala um pouco sobre Mitologia Nórdica, os deuses do clâ Aesir e Vanir. 
-  A aplicação foi desenvolvida com React para consumir a API criada com Strapi, também foi meu primeiro projeto com styled components.
-</h4>
+### O site fala um pouco sobre Mitologia Nórdica, os deuses do clâ Aesir e Vanir. 
+### A aplicação foi desenvolvida com React para consumir a API criada com Strapi, também foi meu primeiro projeto com styled components.
 
 ## 💡 Tecnologias
 
@@ -17,7 +15,7 @@ Tecnologias utilizada no projeto:
 
   
 ## 💻 Projeto
-#### O projeto consiste em uma aplicação landing page, foi utilizado o React e styled components na estilização.
+#### O projeto consiste em uma aplicação landing page, foi utilizado React e styled components na estilização.
 #### Site responsivo para computador, tablet e mobile.
   
 ## 🔍 Layout
