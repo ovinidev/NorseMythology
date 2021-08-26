@@ -25,6 +25,7 @@ export const TextContainer = styled.div`
 
     @media ${theme.media.lteMedium} {
       margin-bottom: ${theme.spacings.large};
+      padding: 0;
     }
   `}
 `;
@@ -36,6 +37,6 @@ export const ImageContainer = styled.div`
 
 export const Image = styled.img`
   ${({ theme }) => css`
-    width: 80%;  
+    width: 70%;  
   `}
 `;
