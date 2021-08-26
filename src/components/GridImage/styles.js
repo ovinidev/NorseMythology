@@ -20,7 +20,7 @@ export const Grid = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
-
+      width: 95vw;
     }
   `}
 `;
