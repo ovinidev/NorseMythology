@@ -1,4 +1,4 @@
-# Landing Page
+# Norse Mythology
 
 
 <p align="center">
