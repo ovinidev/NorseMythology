@@ -15,6 +15,7 @@
 ## 💻 Projeto
 #### O projeto consiste em uma aplicação landing page, foi utilizado React e styled components na estilização.
 #### Site responsivo para computador, tablet e mobile.
+#### A aplicação também possui um Dark Mode.
   
 ## 🔍 Layout
 
