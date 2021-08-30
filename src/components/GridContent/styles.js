@@ -14,6 +14,7 @@ export const Html = styled.div`
 
     p {
     font-size: ${theme.font.sizes.medium};
+    
   }
   `}
 `;

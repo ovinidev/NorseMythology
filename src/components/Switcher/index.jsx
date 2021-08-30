@@ -6,26 +6,17 @@ import { shade } from 'polished';
 import { useContext } from 'react';
 
 import { ThemeContext } from 'styled-components';
-import { Container } from './styles';
+import { Container, Input } from './styles';
 
 export const Switcher = ({ toggleTheme }) => {
   const { colors, title } = useContext(ThemeContext);
 
   return (
     <Container>
-      <Switch
-        class
-        onChange={toggleTheme}
-        checked={title === 'dark'}
-        checkedIcon={false}
-        uncheckedIcon={false}
-        height={10}
-        width={40}
-        handleDiameter={20}
-        onHandleColor="#ffffff"
-        offColor={shade(0.15, '#C82270')}
-        onColor={colors.secondaryColor}
-        />
+      {title === 'dark'
+        ? (<Input type="image" alt="image" src="https://image.flaticon.com/icons/png/512/979/979585.png" width="25" height="15" onClick={toggleTheme} />)
+        : (<Input type="image" alt="image" src="https://image.flaticon.com/icons/png/512/2949/2949009.png" width="25" height="15" onClick={toggleTheme} />)}
+
     </Container>
   );
 };

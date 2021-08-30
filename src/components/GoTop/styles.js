@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const Container = styled.a`
   ${({ theme }) => css`
     position: fixed;
-    background: ${theme.colors.primaryColor};
+    background: ${theme.colors.secondaryColor};
     color: ${theme.colors.white};
     display: flex;
     align-items: center;

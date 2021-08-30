@@ -14,7 +14,7 @@ export const Container = styled.div`
     }
     ${Title} {
       margin-bottom: ${theme.spacings.xlarge};
-      color: ${background ? theme.colors.white : theme.colors.black};
+      color: ${background ? theme.colors.txt : theme.colors.white};
     }
   `}
 `;

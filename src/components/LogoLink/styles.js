@@ -5,10 +5,7 @@ export const Container = styled.a`
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: inherit;
+    color: ${theme.colors.white}
 
-    > img {
-      max-height: 3rem;
-    }
   `}
 `;
