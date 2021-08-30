@@ -25,7 +25,7 @@ export const Container = styled.div`
 
 export const MenuContainer = styled.div`
   ${({ theme }) => css`
-    background: ${theme.colors.white};
+    background: ${theme.colors.black};
     display: flex;
     justify-content: space-around;
     align-items: center;

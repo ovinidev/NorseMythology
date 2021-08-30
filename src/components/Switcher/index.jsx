@@ -22,6 +22,7 @@ export const Switcher = ({ toggleTheme }) => {
         height={10}
         width={40}
         handleDiameter={20}
+        onHandleColor="#ffffff"
         offColor={shade(0.15, '#C82270')}
         onColor={colors.secondaryColor}
         />
