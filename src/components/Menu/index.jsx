@@ -11,28 +11,26 @@ import { SwitchContext } from '../../context/SwitchContext';
 
 export const Menu = ({ links = [], logoData }) => {
   const [visible, setVisible] = useState(false);
-  const { toggleTheme, theme } = useContext(SwitchContext);
+  const { toggleTheme } = useContext(SwitchContext);
 
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <Styled.Button
-          visible={visible}
-          onClick={() => setVisible(true)}
-          aria-label="Open/Close menu">
-          {visible ? (
-            <CloseIcon aria-label="Close menu" />
-          ) : (
-            <MenuIcon aria-label="Open menu" />)}
-        </Styled.Button>
-        <Styled.Container visible={visible} onClick={() => setVisible(false)}>
-          <Styled.MenuContainer>
-            <Switcher toggleTheme={toggleTheme} />
-            <LogoLink {...logoData} />
-            <NavLinks links={links} />
-          </Styled.MenuContainer>
-        </Styled.Container>
-      </ThemeProvider>
+      <Styled.Button
+        visible={visible}
+        onClick={() => setVisible(true)}
+        aria-label="Open/Close menu">
+        {visible ? (
+          <CloseIcon aria-label="Close menu" />
+        ) : (
+          <MenuIcon aria-label="Open menu" />)}
+      </Styled.Button>
+      <Styled.Container visible={visible} onClick={() => setVisible(false)}>
+        <Styled.MenuContainer>
+          <Switcher toggleTheme={toggleTheme} />
+          <LogoLink {...logoData} />
+          <NavLinks links={links} />
+        </Styled.MenuContainer>
+      </Styled.Container>
     </>
   );
 };

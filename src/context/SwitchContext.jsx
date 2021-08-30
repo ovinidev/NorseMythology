@@ -1,6 +1,7 @@
 import { createContext, useState } from 'react';
 import { light } from '../styles/themes/light';
 import { dark } from '../styles/themes/dark';
+import { usePersistedState } from './usePersistedState';
 
 export const SwitchContext = createContext();
 
