@@ -1,24 +1,15 @@
 import { ThemeProvider } from 'styled-components';
-import { useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { useContext } from 'react';
 import { GlobalStyles } from './styles/global-styles';
-import { light } from './styles/themes/light';
-import { dark } from './styles/themes/dark';
 import Home from './templates/Home';
+import { SwitchContext } from './context/SwitchContext';
 
-import { usePersistedState } from './utils/usePersistedState';
-import { Switcher } from './components/Switcher';
-
-function App() {
-  const [theme, setTheme] = useState(light);
-
-  const toggleTheme = () => {
-    setTheme(theme === light ? dark : light);
-  };
+export const App = () => {
+  const { theme } = useContext(SwitchContext);
 
   return (
     <ThemeProvider theme={theme}>
-      <Switcher toggleTheme={toggleTheme} />
       <div className="App">
         <GlobalStyles />
         <BrowserRouter>
@@ -30,6 +21,4 @@ function App() {
       </div>
     </ThemeProvider>
   );
-}
-
-export default App;
+};
