@@ -1,15 +1,12 @@
 import P from 'prop-types';
 
-import Switch from 'react-switch';
-import { shade } from 'polished';
-
 import { useContext } from 'react';
 
 import { ThemeContext } from 'styled-components';
 import { Container, Input } from './styles';
 
 export const Switcher = ({ toggleTheme }) => {
-  const { colors, title } = useContext(ThemeContext);
+  const { title } = useContext(ThemeContext);
 
   return (
     <Container>
