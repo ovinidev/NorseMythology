@@ -30,4 +30,7 @@ Você pode visualizar a funcionalidade do projeto através do [link](https://nor
 Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.
   
 ## Resultado final:
+<p align="center">
+<img  src="https://i.imgur.com/IEH7eYu.png" alt="imagem" width=900px> <br>
+<img  src="https://i.imgur.com/vzzWcYs.png" alt="imagem" width=900px> <br>
 
