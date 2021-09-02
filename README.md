@@ -1,6 +1,5 @@
 # Norse Mythology
 
-
 <p align="center">
   
 ### O site fala um pouco sobre Mitologia Nórdica, os deuses do clâ Aesir e Vanir. 
@@ -33,4 +32,3 @@ Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navega
 <p align="center">
 <img  src="https://i.imgur.com/IEH7eYu.png" alt="imagem" width=900px> <br>
 <img  src="https://i.imgur.com/vzzWcYs.png" alt="imagem" width=900px> <br>
-
