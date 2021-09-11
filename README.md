@@ -2,8 +2,8 @@
 
 <p align="center">
   
-### O site fala um pouco sobre Mitologia Nórdica, os deuses do clâ Aesir e Vanir. 
-### A aplicação foi desenvolvida com React para consumir a API criada com Strapi, também foi meu primeiro projeto com styled components.
+#### O site fala um pouco sobre Mitologia Nórdica, os deuses do clâ Aesir e Vanir. 
+#### A aplicação foi desenvolvida com React para consumir a API criada com Strapi, também foi meu primeiro projeto com styled components.
 
 ## 💡 Tecnologias
 
